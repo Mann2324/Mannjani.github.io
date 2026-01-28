@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mann Jani | Entrepreneur</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 80px 0;
+      gap: 40px;
+    }
+
+    .hero img {
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(212,175,55,0.25);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero p {
+      max-width: 500px;
+      color: #cfcfcf;
+      margin: 15px 0 25px;
+      line-height: 1.6;
+    }
+
+    .social a {
+      margin-right: 15px;
+      font-size: 1.2rem;
+      color: #d4af37;
+    }
+
+    /* SECTION */
+    section {
+      padding: 70px 0;
+      border-top: 1px solid #1f1f1f;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #141414;
+      padding: 25px;
+      border-radius: 14px;
+      transition: 0.3s;
+      border: 1px solid #1f1f1f;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+    }
+
+    .card i {
+      font-size: 1.8rem;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #c9c9c9;
+      line-height: 1.5;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .footer {
+      padding: 30px 0;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width:768px){
+      .hero h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="profile.jpg" alt="Mann Jani">
+    <div>
+      <h1>Mann Jani</h1>
+      <p>
+        Builder by background, Computer Engineer by education, and Entrepreneur by mindset.
+        Building value across real estate, technology, investments, and services.
+      </p>
+      <div class="social">
+        <a href="https://instagram.com/iamjani11" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="tel:9510126567"><i class="fas fa-phone"></i></a>
+        <a href="mailto:janimann2324@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUSINESSES -->
+  <section>
+    <h2>Businesses & Ventures</h2>
+    <div class="grid">
+
+      <div class="card">
+        <i class="fas fa-building"></i>
+        <h3>Matangi Developer</h3>
+        <p>Founder & CEO – Real estate development firm. Flagship project: Matangi Residency.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Matangi Infotech</h3>
+        <p>Technology & software solutions company.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-handshake"></i>
+        <h3>10% Enterprise</h3>
+        <p>A-to-Z problem-solving company operating on a 10% commission model.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-home"></i>
+        <h3>Balaji Developer</h3>
+        <p>Property ownership and rental income portfolio.</p>
+      </div>
+
+      <div class="card">
+        <i class="fab fa-bitcoin"></i>
+        <h3>21Million</h3>
+        <p>Cryptocurrency and digital asset venture.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-recycle"></i>
+        <h3>Recycling Business</h3>
+        <p>Sustainable waste management and recycling operations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UPCOMING -->
+  <section>
+    <h2>Upcoming Ventures</h2>
+    <div class="grid">
+
+      <div class="card"><i class="fas fa-charging-station"></i><h3>EV Charging Station</h3></div>
+      <div class="card"><i class="fas fa-waffle"></i><h3>Waffle.co</h3></div>
+      <div class="card"><i class="fas fa-car"></i><h3>Car Washing Station</h3></div>
+      <div class="card"><i class="fas fa-pills"></i><h3>Medical Store</h3></div>
+      <div class="card"><i class="fas fa-gamepad"></i><h3>PlayStation Game Zone</h3></div>
+      <div class="card"><i class="fas fa-soap"></i><h3>Laundry Shop</h3></div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-location-dot"></i> Himatnagar – Ahmedabad</p>
+    <p><i class="fas fa-phone"></i> 9510126567</p>
+    <p><i class="fas fa-envelope"></i> janimann2324@gmail.com</p>
+  </section>
+
+  <div class="footer">
+    © 2026 Mann Jani — Living Simple. Building Extraordinary.
+  </div>
+
+</div>
+
+</body>
+</html>
