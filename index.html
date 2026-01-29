@@ -22,6 +22,7 @@ body{
   font-family:'Inter',sans-serif;
   background:radial-gradient(circle at top,#1a1a1a,var(--dark));
   color:var(--light);
+  overflow-x:hidden;
 }
 .container{
   max-width:1200px;
@@ -41,7 +42,7 @@ body{
   transform:translateY(0);
 }
 
-/* Profile photo */
+/* Profile */
 .profile-wrapper{
   display:flex;
   justify-content:center;
@@ -53,12 +54,11 @@ body{
   aspect-ratio:1/1;
   border-radius:50%;
   object-fit:cover;
-  object-position:center 30%; /* FACE FIX */
+  object-position:center 30%;
   border:2px solid rgba(201,162,93,0.45);
   box-shadow:0 35px 90px rgba(0,0,0,0.85);
   animation:float 6s ease-in-out infinite;
 }
-
 @keyframes float{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
@@ -73,12 +73,12 @@ h1{
 .subtitle{
   color:var(--gold);
   letter-spacing:1px;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 .tagline{
   font-style:italic;
   color:#b5b5b5;
-  margin-bottom:30px;
+  margin-bottom:26px;
 }
 p{
   line-height:1.9;
@@ -87,11 +87,18 @@ p{
   margin:0 auto 22px;
 }
 
-/* Social */
+/* Social icons */
+.social{
+  margin-top:20px;
+}
 .social a{
   margin:0 14px;
-  font-size:20px;
+  font-size:22px;
   color:var(--gold);
+  transition:transform .3s ease;
+}
+.social a:hover{
+  transform:translateY(-4px);
 }
 
 /* Sections */
@@ -101,28 +108,30 @@ p{
   margin-bottom:60px;
 }
 
-/* Business cards */
+/* Business blocks */
 .business{
   max-width:950px;
-  margin:0 auto 60px;
+  margin:0 auto 70px;
   text-align:left;
 }
 .business h3{
   font-family:'Playfair Display',serif;
   color:var(--gold);
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 .business i{
   color:var(--gold);
   margin-right:8px;
 }
 
-/* Contact form */
+/* Grid */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
 }
+
+/* Form */
 .form-box{
   background:rgba(255,255,255,0.04);
   padding:40px;
@@ -155,6 +164,7 @@ footer{
   border-top:1px solid #222;
 }
 
+/* Mobile */
 @media(max-width:900px){
   h1{font-size:40px;}
   .profile-photo{width:80%;}
@@ -178,70 +188,64 @@ footer{
   <p>
     I am Mann Jani, a builder by background and a computer engineer by education.
     My work spans real estate development, technology-driven solutions, asset
-    creation, and diversified business ventures. I focus on long-term value,
-    disciplined execution, and sustainable growth.
+    creation, and diversified business ventures with a long-term vision.
   </p>
+
+  <div class="social">
+    <a href="https://instagram.com/iamjani11" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/919510126567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:janimann2324@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
 </section>
 
-<!-- BUSINESSES -->
+<!-- CURRENT BUSINESSES -->
 <section class="container fade-up">
   <div class="section-title">Businesses & Ventures</div>
 
   <div class="business">
     <h3><i class="fas fa-building"></i> Matangi Developer</h3>
     <p>
-      Matangi Developer is a real estate development firm founded and led by me,
-      focused on residential and commercial construction projects. The company
-      emphasizes structured planning, quality execution, legal compliance, and
-      long-term asset value. Each project is approached with a clear vision of
-      sustainability, durability, and customer trust.
+      Matangi Developer is a real estate development firm focused on residential
+      and commercial construction. The company emphasizes planning, quality
+      execution, compliance, and long-term asset value.
     </p>
     <p>
-      The flagship project, <strong>Matangi Residency</strong>, reflects this
-      philosophy by combining practical design, efficient use of space, and
-      long-term livability. The goal is not just construction, but value creation.
+      The flagship project, <strong>Matangi Residency</strong>, represents a
+      balanced approach to design, durability, and practical living standards.
     </p>
   </div>
 
   <div class="business">
     <h3><i class="fas fa-laptop-code"></i> Matangi Infotech</h3>
     <p>
-      Matangi Infotech is a technology-focused company providing software
-      development, digital solutions, and IT-enabled services. The company
-      supports businesses in adopting modern technology to improve efficiency,
-      scalability, and digital presence.
-    </p>
-    <p>
-      With my background in computer engineering, the focus is on building
-      practical, secure, and scalable solutions rather than experimental systems.
+      Matangi Infotech delivers software development, digital platforms, and IT
+      solutions that help businesses adopt modern technology efficiently and
+      securely.
     </p>
   </div>
 
   <div class="business">
     <h3><i class="fas fa-home"></i> Balaji Developer</h3>
     <p>
-      Balaji Developer manages owned real estate assets and rental properties.
-      This venture focuses on acquiring, maintaining, and operating income-
-      generating properties that deliver stable and predictable cash flow.
+      Balaji Developer manages owned properties and rental assets, focusing on
+      stable income generation and long-term asset maintenance.
     </p>
   </div>
 
   <div class="business">
     <h3><i class="fas fa-briefcase"></i> 10% Enterprise</h3>
     <p>
-      10% Enterprise is a problem-solving and solutions company operating on a
-      transparent ten percent commission-based model. The company handles a wide
-      range of requirements including legal coordination, documentation support,
-      operational execution, and business facilitation.
+      10% Enterprise operates as an A-to-Z solution firm working on a transparent
+      ten percent commission model, covering legal coordination, operations, and
+      business facilitation.
     </p>
   </div>
 
   <div class="business">
     <h3><i class="fas fa-coins"></i> 21Million</h3>
     <p>
-      21Million is a cryptocurrency and digital asset venture focused on emerging
-      financial technologies. The objective is to study, invest, and participate
-      in future-ready financial systems with calculated risk and long-term vision.
+      21Million is a digital asset and cryptocurrency venture focused on future
+      financial systems, research-driven investments, and calculated risk.
     </p>
   </div>
 
@@ -249,8 +253,60 @@ footer{
     <h3><i class="fas fa-recycle"></i> Recycling Business</h3>
     <p>
       This venture focuses on recycling operations and responsible waste
-      management. The goal is to combine business viability with environmental
-      responsibility, supporting sustainable practices at a local level.
+      management, aligning profitability with environmental responsibility.
+    </p>
+  </div>
+</section>
+
+<!-- UPCOMING VENTURES -->
+<section class="container fade-up">
+  <div class="section-title">Upcoming Ventures</div>
+
+  <div class="business">
+    <h3><i class="fas fa-charging-station"></i> EV Charging Infrastructure</h3>
+    <p>
+      Development of electric vehicle charging stations to support sustainable
+      transportation and future mobility needs.
+    </p>
+  </div>
+
+  <div class="business">
+    <h3><i class="fas fa-store"></i> Waffle.co</h3>
+    <p>
+      A modern food and beverage concept focused on branding, quality, and
+      scalable retail operations.
+    </p>
+  </div>
+
+  <div class="business">
+    <h3><i class="fas fa-car"></i> Automated Car Washing Facility</h3>
+    <p>
+      A professional car care service offering efficient, high-quality washing
+      solutions with minimal turnaround time.
+    </p>
+  </div>
+
+  <div class="business">
+    <h3><i class="fas fa-notes-medical"></i> Medical Store</h3>
+    <p>
+      A retail pharmaceutical outlet providing essential healthcare products with
+      reliability and regulatory compliance.
+    </p>
+  </div>
+
+  <div class="business">
+    <h3><i class="fas fa-gamepad"></i> PlayStation Game House</h3>
+    <p>
+      A premium gaming zone designed for entertainment, social engagement, and a
+      modern recreational experience.
+    </p>
+  </div>
+
+  <div class="business">
+    <h3><i class="fas fa-shirt"></i> Laundry & Garment Care</h3>
+    <p>
+      A professional laundry service focused on garment care quality, hygiene
+      standards, and customer convenience.
     </p>
   </div>
 </section>
@@ -258,6 +314,7 @@ footer{
 <!-- CONTACT -->
 <section class="container fade-up">
   <div class="section-title">Contact</div>
+
   <div class="grid">
     <form class="form-box" action="mailto:janimann2324@gmail.com" method="post" enctype="text/plain">
       <input type="text" name="Name" placeholder="Full Name" required>
@@ -290,5 +347,5 @@ document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 </script>
 
 </body>
-</html>
-
+  </html>
+  
