@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <meta charset="UTF-8">
   <title>Access Required</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+      background: radial-gradient(1200px circle at top, #111827 0%, #020617 55%, #000000 100%);
       color: #fff;
       display: flex;
       align-items: center;
@@ -16,13 +20,15 @@
       height: 100vh;
     }
     .box {
-      background: #020617;
-      padding: 40px 32px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 380px;
-      text-align: center;
-      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+      background: linear-gradient(
+  180deg,
+  rgba(255,255,255,0.06),
+  rgba(255,255,255,0.02)
+);
+border: 1px solid rgba(255,255,255,0.08);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+box-shadow: 0 30px 60px rgba(0,0,0,0.6);
     }
     input {
       width: 100%;
@@ -33,17 +39,26 @@
       font-size: 16px;
     }
     button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 8px;
-      background: #22c55e;
-      color: #000;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
+  width: 100%;
+  padding: 14px;
+  margin-top: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: linear-gradient(180deg, #ffffff, #e5e7eb);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #020617;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.35s ease;
     }
+    button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #ffffff, #d1d5db);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      }
+    
     .msg {
       margin-top: 15px;
       font-size: 14px;
@@ -133,6 +148,7 @@ window.location.href = "home.html";
 
 </body>
 </html>
+
 
 
 
