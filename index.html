@@ -100,18 +100,13 @@ function requestAccess() {
 
       fetch("https://script.google.com/macros/s/AKfycbw24XumYcNb2CWX3KWWrRYKhYrKC_t447EpXvKmQNvBjYaPJvr-7faBy0QPutVPkmWMow/exec", {
   method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
+  mode: "no-cors",
   body: JSON.stringify(data)
-})
-.then(() => {
-  localStorage.setItem("accessData", JSON.stringify(data));
-  window.location.href = "home.html";
-})
-.catch(() => {
-  alert("Error saving data. Try again.");
 });
+
+localStorage.setItem("accessData", JSON.stringify(data));
+window.location.href = "home.html";
+      
 
     },
     function(error) {
@@ -124,6 +119,7 @@ function requestAccess() {
 
 </body>
 </html>
+
 
 
 
